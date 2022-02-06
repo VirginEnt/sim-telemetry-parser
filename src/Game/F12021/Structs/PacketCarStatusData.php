@@ -1,0 +1,51 @@
+<?php
+
+
+namespace VirginEnt\SimTelemetryParser\Game\F12021\Structs;
+
+use VirginEnt\SimTelemetryParser\Util\BinaryFormatCodesHelper;
+
+class PacketCarStatusData extends AbstractF12021Struct
+{
+
+    /**
+    * Header
+    *
+    * @var PacketHeader
+    */
+    protected PacketHeader $header;
+
+    /**
+    * 
+    *
+    * @var CarStatusData[]
+    * @size 22
+    */
+    protected array $carStatusData;
+
+    /**
+     * @return PacketHeader
+     */
+    public function getHeader(): PacketHeader
+    {
+        return $this->header;
+    }
+
+    /**
+     * @return CarStatusData[]
+     */
+    public function getCarStatusData(): array
+    {
+        return $this->carStatusData;
+    }
+
+    /**
+     * @param int $carIndex
+     * @return CarStatusData
+     */
+    public function getCarStatus(int $carIndex): CarStatusData
+    {
+        return $this->carStatusData[$carIndex];
+    }
+
+}

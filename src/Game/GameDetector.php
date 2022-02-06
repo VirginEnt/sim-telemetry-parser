@@ -16,6 +16,7 @@ use VirginEnt\SimTelemetryParser\Util\BinaryFormatCodesHelper;
 class GameDetector
 {
     const GAME_F1_2020 = "F1 2020";
+    const GAME_F1_2021 = "F1 2021";
 
     /**
      * Given a stream, identify the game
@@ -53,6 +54,8 @@ class GameDetector
         switch ($format) {
             case 2020:
                 return self::GAME_F1_2020;
+            case 2021:
+                return self::GAME_F1_2021;
             // if adding more games in the future, we'll need to detect their packets here
         }
 
@@ -73,6 +76,8 @@ class GameDetector
         switch ($game) {
             case self::GAME_F1_2020:
                 return new PacketDetector();
+            case self::GAME_F1_2021:
+                return new PacketDetector();
         }
 
         throw new \RuntimeException("Unidentified packet received. This app currently only supports F1 2020");
@@ -91,6 +96,8 @@ class GameDetector
 
         switch ($game) {
             case self::GAME_F1_2020:
+                return new PacketDetector();
+            case self::GAME_F1_2021:
                 return new PacketDetector();
         }
 
