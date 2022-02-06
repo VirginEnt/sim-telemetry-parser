@@ -2,7 +2,7 @@
 
     include 'vendor/autoload.php';
 
-    $parser = \AndyWaite\SimTelemetryParser\Parser::getParser();
+    $parser = \VirginEnt\SimTelemetryParser\Parser::getParser();
 
     //Create a UDP socket
     if(!($sock = socket_create(AF_INET, SOCK_DGRAM, 0)))
@@ -42,28 +42,28 @@
             $packet = $parser->streamToModels($buffer);
             $playerCar = $packet->getHeader()->getPlayerCarIndex();
 
-            if ($packet instanceof \AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketCarTelemetryData) {
+            if ($packet instanceof \VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketCarTelemetryData) {
                 $data["Gear"] =  $packet->getCarTelemetry($playerCar)->getGear();
                 $data["Speed"] =  $packet->getCarTelemetry($playerCar)->getSpeed()."kph";
                 $data["RPM"] =  $packet->getCarTelemetry($playerCar)->getEngineRPM()."kph";
             }
 
-            if ($packet instanceof \AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketCarStatusData) {
+            if ($packet instanceof \VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketCarStatusData) {
                 $data["Fuel mix"] =  $packet->getCarStatus($playerCar)->getFuelMix();
                 $data["Brake bias"] =  $packet->getCarStatus($playerCar)->getFrontBrakeBias();
             }
 
-            if ($packet instanceof \AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketMotionData) {
+            if ($packet instanceof \VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketMotionData) {
                 $data["Lateral G"] =  $packet->getCarMotion($playerCar)->getGForceLateral();
                 $data["Lng G"] =  $packet->getCarMotion($playerCar)->getGForceLongitudinal();
                 $data["Vert G"] =  $packet->getCarMotion($playerCar)->getGForceVertical();
             }
 
-            if ($packet instanceof \AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketSessionData) {
+            if ($packet instanceof \VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketSessionData) {
                 $data["Track"] =  $packet->getTrackId();
             }
 
-            if ($packet instanceof \AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketLapData) {
+            if ($packet instanceof \VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketLapData) {
                 $data["Best lap"] =  $packet->getCarLapData($playerCar)->getBestLapNum();
                 $data["Last lap"] =  $packet->getCarLapData($playerCar)->getLastLapTime();
                 $data["Current lap"] =  $packet->getCarLapData($playerCar)->getCurrentLapTime();

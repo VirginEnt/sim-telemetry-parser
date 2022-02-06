@@ -1,12 +1,12 @@
 <?php
 
-namespace AndyWaite\SimTelemetryParser\Test\Packet;
+namespace VirginEnt\SimTelemetryParser\Test\Packet;
 
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketMotionData;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketParticipantsData;
-use AndyWaite\SimTelemetryParser\Packet\DataStructure;
-use AndyWaite\SimTelemetryParser\Packet\Unpacker;
-use AndyWaite\SimTelemetryParser\Util\DocBlockParser;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketMotionData;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketParticipantsData;
+use VirginEnt\SimTelemetryParser\Packet\DataStructure;
+use VirginEnt\SimTelemetryParser\Packet\Unpacker;
+use VirginEnt\SimTelemetryParser\Util\DocBlockParser;
 use PHPUnit\Framework\TestCase;
 
 class UnpackerTest extends TestCase

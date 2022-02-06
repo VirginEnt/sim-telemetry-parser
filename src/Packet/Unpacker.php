@@ -1,8 +1,8 @@
 <?php
 
-namespace AndyWaite\SimTelemetryParser\Packet;
+namespace VirginEnt\SimTelemetryParser\Packet;
 
-use AndyWaite\SimTelemetryParser\Util\DocBlockParser;
+use VirginEnt\SimTelemetryParser\Util\DocBlockParser;
 
 class Unpacker
 {
@@ -97,7 +97,7 @@ class Unpacker
 
             if (isset($docBlock['type'])) {
                 // If there's a defined type, it must be a primitive (e.g. uint16)
-                $typeString = constant('AndyWaite\\SimTelemetryParser\\Util\\'.$docBlock['type']);
+                $typeString = constant('VirginEnt\\SimTelemetryParser\\Util\\'.$docBlock['type']);
 
                 if ($isString) {
                     $typeString .= $docBlock['size'];

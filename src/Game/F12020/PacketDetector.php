@@ -1,27 +1,27 @@
 <?php
 
-namespace AndyWaite\SimTelemetryParser\Game\F12020;
+namespace VirginEnt\SimTelemetryParser\Game\F12020;
 
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\AbstractF12020Struct;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\FastestLap;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketCarSetupData;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketCarStatusData;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketCarTelemetryData;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketEventData;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketFinalClassificationData;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketLapData;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketLobbyInfoData;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketMotionData;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketParticipantsData;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketSessionData;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\Penalty;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\RaceWinner;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\Retirement;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\SpeedTrap;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\TeamMateInPits;
-use AndyWaite\SimTelemetryParser\Packet\PacketDetectorInterface;
-use AndyWaite\SimTelemetryParser\Packet\PacketInterface;
-use AndyWaite\SimTelemetryParser\Util\BinaryFormatCodesHelper;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\AbstractF12020Struct;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\FastestLap;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketCarSetupData;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketCarStatusData;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketCarTelemetryData;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketEventData;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketFinalClassificationData;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketLapData;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketLobbyInfoData;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketMotionData;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketParticipantsData;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketSessionData;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\Penalty;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\RaceWinner;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\Retirement;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\SpeedTrap;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\TeamMateInPits;
+use VirginEnt\SimTelemetryParser\Packet\PacketDetectorInterface;
+use VirginEnt\SimTelemetryParser\Packet\PacketInterface;
+use VirginEnt\SimTelemetryParser\Util\BinaryFormatCodesHelper;
 
 class PacketDetector implements PacketDetectorInterface
 {

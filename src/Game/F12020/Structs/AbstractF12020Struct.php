@@ -1,11 +1,11 @@
 <?php
 
 
-namespace AndyWaite\SimTelemetryParser\Game\F12020\Structs;
+namespace VirginEnt\SimTelemetryParser\Game\F12020\Structs;
 
 
-use AndyWaite\SimTelemetryParser\Packet\DataStructure;
-use AndyWaite\SimTelemetryParser\Util\DocBlockParser;
+use VirginEnt\SimTelemetryParser\Packet\DataStructure;
+use VirginEnt\SimTelemetryParser\Util\DocBlockParser;
 use ReflectionClass;
 
 abstract class AbstractF12020Struct implements DataStructure

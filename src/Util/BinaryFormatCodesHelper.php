@@ -1,6 +1,6 @@
 <?php
 
-namespace AndyWaite\SimTelemetryParser\Util;
+namespace VirginEnt\SimTelemetryParser\Util;
 
 class BinaryFormatCodesHelper
 {

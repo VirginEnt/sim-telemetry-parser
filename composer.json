@@ -1,5 +1,5 @@
 {
-    "name": "andywaite/sim-telemetry-parser",
+    "name": "virginent/sim-telemetry-parser",
     "description": "Library to parse UDP packets from racing sims. Currently supports Codemasters' F1 2020 only.",
     "type": "library",
     "require-dev": {
@@ -8,8 +8,8 @@
     "license": "GPL-3.0-or-later",
     "authors": [
         {
-            "name": "andrew",
-            "email": "andrewwaite@silktide.com"
+            "name": "Daniel",
+            "email": "daniel.lucas@dlmails.de"
         }
     ],
     "require": {
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AndyWaite\\SimTelemetryParser\\": "src/"
+            "VirginEnt\\SimTelemetryParser\\": "src/"
         }
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace AndyWaite\SimTelemetryParser\Test\Game\F12020;
+namespace VirginEnt\SimTelemetryParser\Test\Game\F12020;
 
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketMotionData;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketMotionData;
 use PHPUnit\Framework\TestCase;
 
 class HydrationTest extends TestCase

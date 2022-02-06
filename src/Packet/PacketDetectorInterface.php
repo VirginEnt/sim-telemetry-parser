@@ -1,7 +1,7 @@
 <?php
 
 
-namespace AndyWaite\SimTelemetryParser\Packet;
+namespace VirginEnt\SimTelemetryParser\Packet;
 
 interface PacketDetectorInterface
 {

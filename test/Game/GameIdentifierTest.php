@@ -1,9 +1,9 @@
 <?php
 
-namespace AndyWaite\SimTelemetryParser\Test\Game\GameFactoryTest;
+namespace VirginEnt\SimTelemetryParser\Test\Game\GameFactoryTest;
 
-use AndyWaite\SimTelemetryParser\Game\GameDetector;
-use AndyWaite\SimTelemetryParser\Game\F12020\PacketDetector;
+use VirginEnt\SimTelemetryParser\Game\GameDetector;
+use VirginEnt\SimTelemetryParser\Game\F12020\PacketDetector;
 use PHPUnit\Framework\TestCase;
 
 class GameIdentifierTest extends TestCase

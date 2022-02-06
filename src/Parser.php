@@ -1,12 +1,12 @@
 <?php
 
 
-namespace AndyWaite\SimTelemetryParser;
+namespace VirginEnt\SimTelemetryParser;
 
-use AndyWaite\SimTelemetryParser\Game\GameDetector;
-use AndyWaite\SimTelemetryParser\Packet\DataStructure;
-use AndyWaite\SimTelemetryParser\Packet\Unpacker;
-use AndyWaite\SimTelemetryParser\Util\DocBlockParser;
+use VirginEnt\SimTelemetryParser\Game\GameDetector;
+use VirginEnt\SimTelemetryParser\Packet\DataStructure;
+use VirginEnt\SimTelemetryParser\Packet\Unpacker;
+use VirginEnt\SimTelemetryParser\Util\DocBlockParser;
 
 class Parser
 {

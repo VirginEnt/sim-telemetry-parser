@@ -1,14 +1,14 @@
 <?php
 
-namespace AndyWaite\SimTelemetryParser\Test\ParserTest;
+namespace VirginEnt\SimTelemetryParser\Test\ParserTest;
 
-use AndyWaite\SimTelemetryParser\Game\GameDetector;
-use AndyWaite\SimTelemetryParser\Packet\DataStructure;
-use AndyWaite\SimTelemetryParser\Packet\F12020\MotionPacket;
-use AndyWaite\SimTelemetryParser\Packet\PacketDetectorInterface;
-use AndyWaite\SimTelemetryParser\Packet\PacketInterface;
-use AndyWaite\SimTelemetryParser\Packet\Unpacker;
-use AndyWaite\SimTelemetryParser\Parser;
+use VirginEnt\SimTelemetryParser\Game\GameDetector;
+use VirginEnt\SimTelemetryParser\Packet\DataStructure;
+use VirginEnt\SimTelemetryParser\Packet\F12020\MotionPacket;
+use VirginEnt\SimTelemetryParser\Packet\PacketDetectorInterface;
+use VirginEnt\SimTelemetryParser\Packet\PacketInterface;
+use VirginEnt\SimTelemetryParser\Packet\Unpacker;
+use VirginEnt\SimTelemetryParser\Parser;
 use PHPUnit\Framework\TestCase;
 
 class ParserTest extends TestCase

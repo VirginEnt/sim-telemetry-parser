@@ -1,9 +1,9 @@
 <?php
 
 
-namespace AndyWaite\SimTelemetryParser\Game\F12020\Structs;
+namespace VirginEnt\SimTelemetryParser\Game\F12020\Structs;
 
-use AndyWaite\SimTelemetryParser\Util\BinaryFormatCodesHelper;
+use VirginEnt\SimTelemetryParser\Util\BinaryFormatCodesHelper;
 
 class Penalty extends AbstractF12020Struct
 {

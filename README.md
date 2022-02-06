@@ -21,13 +21,13 @@ parsing the raw data and turning it into a friendly model.
 
 1) Use Composer to install
    
-   `$ composer install andywaite/sim-telemetry-parser`
+   `$ composer require VirginEnt/sim-telemetry-parser`
    
 2) Use it!
    
    ```                                                         
    // Create parser class
-   $parser = AndyWaite\SimTelemetryParser\Parser::getParser();
+   $parser = VirginEnt\SimTelemetryParser\Parser::getParser();
    
    // Parse a stream
    $packet = $parser->streamToModels($binaryStream);
@@ -36,7 +36,7 @@ parsing the raw data and turning it into a friendly model.
    $playerCar = $packet->getHeader()->getPlayerCarIndex();
                            
    // Each packet contains different data. Speed is only contained in the car telemetry packet
-   if ($packet instanceof \AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketCarTelemetryData) {
+   if ($packet instanceof \VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketCarTelemetryData) {
     echo "You are traveling at ".$packet->getCarTelemetry($playerCar)->getSpeed()."kph";
    }
     ```                     
@@ -44,23 +44,23 @@ parsing the raw data and turning it into a friendly model.
 For a scrappy demo of it in use, see `demo.php`
 
 ## Types of model that can be returned by parse function
- - `AndyWaite\SimTelemetryParser\Game\F12020\PacketCarSetupData`
- - `AndyWaite\SimTelemetryParser\Game\F12020\PacketCarStatusData`
- - `AndyWaite\SimTelemetryParser\Game\F12020\PacketCarTelemetryData`
- - `AndyWaite\SimTelemetryParser\Game\F12020\PacketEventData`
- - `AndyWaite\SimTelemetryParser\Game\F12020\PacketFinalClassificationData`
- - `AndyWaite\SimTelemetryParser\Game\F12020\PacketHeader`
- - `AndyWaite\SimTelemetryParser\Game\F12020\PacketLapData`
- - `AndyWaite\SimTelemetryParser\Game\F12020\PacketLobbyInfoData`
- - `AndyWaite\SimTelemetryParser\Game\F12020\PacketMotionData`
- - `AndyWaite\SimTelemetryParser\Game\F12020\PacketParticipantsData`
- - `AndyWaite\SimTelemetryParser\Game\F12020\PacketSessionData`
- - `AndyWaite\SimTelemetryParser\Game\F12020\FastestLap`
- - `AndyWaite\SimTelemetryParser\Game\F12020\Penalty`
- - `AndyWaite\SimTelemetryParser\Game\F12020\RaceWinner`
- - `AndyWaite\SimTelemetryParser\Game\F12020\Retirement`
- - `AndyWaite\SimTelemetryParser\Game\F12020\SpeedTrap`
- - `AndyWaite\SimTelemetryParser\Game\F12020\TeamMateInPits`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\PacketCarSetupData`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\PacketCarStatusData`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\PacketCarTelemetryData`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\PacketEventData`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\PacketFinalClassificationData`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\PacketHeader`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\PacketLapData`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\PacketLobbyInfoData`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\PacketMotionData`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\PacketParticipantsData`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\PacketSessionData`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\FastestLap`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\Penalty`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\RaceWinner`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\Retirement`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\SpeedTrap`
+ - `VirginEnt\SimTelemetryParser\Game\F12020\TeamMateInPits`
 
 ## Future development
 

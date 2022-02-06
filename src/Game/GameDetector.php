@@ -1,15 +1,15 @@
 <?php
 
 
-namespace AndyWaite\SimTelemetryParser\Game;
+namespace VirginEnt\SimTelemetryParser\Game;
 
-use AndyWaite\SimTelemetryParser\Game\F12020\PacketDetector;
-use AndyWaite\SimTelemetryParser\Packet\PacketDetectorInterface;
-use AndyWaite\SimTelemetryParser\Util\BinaryFormatCodesHelper;
+use VirginEnt\SimTelemetryParser\Game\F12020\PacketDetector;
+use VirginEnt\SimTelemetryParser\Packet\PacketDetectorInterface;
+use VirginEnt\SimTelemetryParser\Util\BinaryFormatCodesHelper;
 
 /**
  * Class GameIdentifier
- * @package AndyWaite\SimTelemetryParser\Packet
+ * @package VirginEnt\SimTelemetryParser\Packet
  *
  * Look at the header of the packet and identify the game. Currently only supports F1 2020.
  */

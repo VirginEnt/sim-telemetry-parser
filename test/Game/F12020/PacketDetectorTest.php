@@ -1,11 +1,11 @@
 <?php
 
-namespace AndyWaite\SimTelemetryParser\Test\Game\F12020;
+namespace VirginEnt\SimTelemetryParser\Test\Game\F12020;
 
-use AndyWaite\SimTelemetryParser\Game\F12020\PacketDetector;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketEventData;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\PacketMotionData;
-use AndyWaite\SimTelemetryParser\Game\F12020\Structs\Penalty;
+use VirginEnt\SimTelemetryParser\Game\F12020\PacketDetector;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketEventData;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\PacketMotionData;
+use VirginEnt\SimTelemetryParser\Game\F12020\Structs\Penalty;
 use PHPUnit\Framework\TestCase;
 
 class PacketDetectorTest extends TestCase
