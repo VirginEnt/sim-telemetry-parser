@@ -5,7 +5,7 @@ namespace VirginEnt\SimTelemetryParser\Game\F12021\Structs;
 
 use VirginEnt\SimTelemetryParser\Util\BinaryFormatCodesHelper;
 
-class PacketCarDamageData extends AbstractF12021Struct
+class PacketCarSetupData extends AbstractF12021Struct
 {
 
     /**
@@ -18,10 +18,10 @@ class PacketCarDamageData extends AbstractF12021Struct
     /**
     * 
     *
-    * @var carDamageData[]
+    * @var CarSetupData[]
     * @size 22
     */
-    protected array $carDamageData;
+    protected array $carSetups;
 
     /**
      * @return PacketHeader
@@ -32,20 +32,20 @@ class PacketCarDamageData extends AbstractF12021Struct
     }
 
     /**
-     * @return carDamageData[]
+     * @return CarSetupData[]
      */
-    public function getCarDamageData(): array
+    public function getCarSetups(): array
     {
-        return $this->carDamageData;
+        return $this->carSetups;
     }
 
     /**
      * @param int $carIndex
-     * @return CarDamage
+     * @return CarSetupData
      */
-    public function getCarDamage(int $carIndex): CarDamageData
+    public function getCarSetup(int $carIndex): CarSetupData
     {
-        return $this->carDamageData[$carIndex];
+        return $this->carSetups[$carIndex];
     }
 
 

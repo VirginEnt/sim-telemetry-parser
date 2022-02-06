@@ -14,6 +14,7 @@ use VirginEnt\SimTelemetryParser\Game\F12021\Structs\PacketLobbyInfoData;
 use VirginEnt\SimTelemetryParser\Game\F12021\Structs\PacketMotionData;
 use VirginEnt\SimTelemetryParser\Game\F12021\Structs\PacketParticipantsData;
 use VirginEnt\SimTelemetryParser\Game\F12021\Structs\PacketSessionData;
+use VirginEnt\SimTelemetryParser\Game\F12021\Structs\PacketCardDamageData;
 use VirginEnt\SimTelemetryParser\Game\F12021\Structs\Penalty;
 use VirginEnt\SimTelemetryParser\Game\F12021\Structs\RaceWinner;
 use VirginEnt\SimTelemetryParser\Game\F12021\Structs\Retirement;
@@ -35,10 +36,12 @@ class PacketDetector implements PacketDetectorInterface
     const PACKET_CAR_STATUS = 7;
     const PACKET_FINAL_CLASSIFICATION = 8;
     const PACKET_LOBBY_INFO = 9;
+    const PACKET_CAR_DAMAGE = 10;
+    const PACKET_SESSION_HISTORY = 11;
 
     /**
      * Get the packet ID from the
-     * F1 2020 binary stream
+     * F1 2021 binary stream
      *
      * @param string $stream
      * @return int
@@ -61,7 +64,7 @@ class PacketDetector implements PacketDetectorInterface
 
     /**
      * Get the event code from the
-     * F1 2020 binary stream - must be of type EVENT
+     * F1 2021 binary stream - must be of type EVENT
      *
      * @param string $stream
      * @return string
@@ -158,6 +161,10 @@ class PacketDetector implements PacketDetectorInterface
                 return new PacketFinalClassificationData();
             case self::PACKET_LOBBY_INFO:
                 return new PacketLobbyInfoData();
+            case self::PACKET_CAR_DAMAGE:
+                return new PacketCarDamageData();
+            case self::PACKET_SESSION_HISTORY:
+                return null;
         }
 
         throw new \RuntimeException('Unexpected packet received - '.$packetId);
